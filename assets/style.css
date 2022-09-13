@@ -1,0 +1,9 @@
+* {
+    max-width: 1260px;
+    margin: auto;
+}
+.box {
+    border: 1px solid black;
+    width: 80%;
+    border-radius: 25%;
+}
