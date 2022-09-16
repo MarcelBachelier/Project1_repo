@@ -10,21 +10,43 @@
     <title>Document</title>
 </head>
 <header class="welcome">
-    <h1>Magic Bored Ball</h1>
-    <h2>Shake to cure boredom. Repeat until cured.</h2>
+    <h1 class="has-text-danger" animate__hinge>Magic Bored Ball</h1>
+    <h2 class="has-text-danger" animate__hinge>Shake to cure boredom. Repeat until cured.</h2>
 </header>
 <body>
     <div class="button-and-ball">
-        <div class="ball">
-            <div id="activity" class="answer-here">
-                
-            </div>    
+        <div id="outer" class="ball" animate__shakeX>
+            <div class="answer-here" id="activity">
+                placeholder answer
+            </div>  
+
         </div>
-        <input id="price" placeholder="Price double sided slider 0-1 using decimals left side min, right side max" type="form">
-        <input id="type" placeholder="type dropdown education, recreational, social, diy, charity, cooking, relaxation, music, busywork" type="form">
-        <input id="how-many-people" placeholder="How many people" type="form">
+        <div class="select is-link">
+            <select>
+              <option>activity</option>
+              <option>Education</option>
+              <option>recreational</option>
+              <option>social</option>
+              <option>DIY</option>
+              <option>Charity</option>
+              <option>Cooking</option>
+              <option>Relaxation</option>
+              <option>Music</option>
+              <option>Busywork</option>
+            </select>
+          </div>
+          <div class="select is-link">
+            <select>
+              <option>Number Of People</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5+</option>
+            </select>
+          </div>
+          <input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range">Price Range</input>
         <button id="shakey-shake" class="shake-button">Shake</button>
     </div>
-<script src="./assets/script.js"></script>
 <script src="./assets/gifScript.js"></script>
 </html>

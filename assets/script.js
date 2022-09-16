@@ -7,7 +7,6 @@ const adjustPrice = "&price="
 const maxPrice = "&maxprice="
 const minPrice = "&minprice="
 
-
 function disperseData(data) {
     currentActivity = document.getElementById('activity')
     currentActivity.textContent = data.activity
