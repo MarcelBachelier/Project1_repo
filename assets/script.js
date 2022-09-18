@@ -19,13 +19,18 @@ function fetchActivity(boredURL) {
         return response.json()
 })
     .then(function (data) {
-        disperseData(data)   
+        disperseData(data) 
 })
 }
 
 function iAmBored() {
+    dropdownAccuracy = document.getElementById('type');
+    dropdownAccuracy.addEventListener('click', showPeople)
     shakeButton = document.getElementById('shakey-shake');
-    shakeButton.addEventListener('click', applyChoices)   
+    wholeABall = document.getElementById('outer')
+    shakeButton.addEventListener('click', applyChoices);
+    shakeButton.addEventListener('click', shakeBall);
+    wholeABall.addEventListener('animationend', resetBall) 
 }
 iAmBored();
 
@@ -44,4 +49,23 @@ function applyChoices() {
 
     fetchActivity(boredURL)
 }
-applyChoices()
+
+
+function showPeople(){
+    let whatType = document.getElementById("type");
+    let peopleChooser = document.getElementById("people-chooser");
+    if (whatType.value === 'social') {
+        peopleChooser.classList.remove('hide')
+    } else {
+        peopleChooser.classList.add('hide')
+    }
+}
+
+function shakeBall(){
+    let ball = document.getElementById('outer')
+    ball.classList.add('animate__animated', 'animate__wobble')
+}
+function resetBall(){
+    let resetBall = document.getElementById('outer');
+    resetBall.classList.remove('animate__animated', 'animate__wobble')
+}
