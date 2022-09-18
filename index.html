@@ -10,43 +10,45 @@
     <title>Document</title>
 </head>
 <header class="welcome">
-    <h1 class="has-text-danger" animate__hinge>Magic Bored Ball</h1>
-    <h2 class="has-text-danger" animate__hinge>Shake to cure boredom. Repeat until cured.</h2>
+    <h1 class="heding has-text-centered is-rounded" animate__hinge><strong>Magic Bored Ball</strong></h1>
+    <br>
+    <h2 class="heding has-text-centered is-rounded" animate__hinge>Shake to cure boredom. Repeat until cured.</h2>
 </header>
 <body>
     <div class="button-and-ball">
         <div id="outer" class="ball" animate__shakeX>
-            <div class="answer-here" id="activity">
-                placeholder answer
+            <div class="answer-here">
+                <p class="activity-text has-text-centered" id="activity"></p>
             </div>  
 
         </div>
         <div class="select is-link">
-            <select>
-              <option>activity</option>
-              <option>Education</option>
-              <option>recreational</option>
-              <option>social</option>
-              <option>DIY</option>
-              <option>Charity</option>
-              <option>Cooking</option>
-              <option>Relaxation</option>
-              <option>Music</option>
-              <option>Busywork</option>
+            <select id="type">
+              <option value="education">Education</option>
+              <option value="recreational">Recreation</option>
+              <option value="social">Social</option>
+              <option value="diy">DIY</option>
+              <option value="charity">Charity</option>
+              <option value="cooking">Cooking</option>
+              <option value="relaxation">Relaxation</option>
+              <option value="music">Music</option>
+              <option value="busywork">Busywork</option>
             </select>
           </div>
           <div class="select is-link">
-            <select>
+            <select id="how-many-people">
               <option>Number Of People</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5+</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5+</option>
             </select>
           </div>
-          <input class="slider is-fullwidth" step="1" min="0" max="100" value="50" type="range">Price Range</input>
-        <button id="shakey-shake" class="shake-button">Shake</button>
+          <input id="price" class="slider is-fullwidth" step=".1" min="0" max="1" type="range">Price Range</input>
+        <button id="shakey-shake" class="shake-button button is-rounded">Shake</button>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/script.js"></script>
 <script src="./assets/gifScript.js"></script>
 </html>
