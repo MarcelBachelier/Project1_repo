@@ -16,7 +16,7 @@
 </header>
 <body>
     <div class="button-and-ball">
-        <div id="outer" class="ball" animate__shakeX>
+        <div id="outer" class="ball">
             <div class="answer-here">
                 <p class="activity-text has-text-centered" id="activity"></p>
             </div>  
@@ -35,8 +35,9 @@
               <option value="busywork">Busywork</option>
             </select>
           </div>
-          <div class="select is-link hide">
+          <div id="people-chooser" class="select is-link hide">
             <select id="how-many-people">
+              <option value="1">How Many People?</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -44,7 +45,7 @@
               <option value="5">5+</option>
             </select>
           </div>
-          <input id="price" class="slider is-fullwidth" step=".1" min="0" max="1" type="range">Price Range</input>
+          <input id="price" class="slider is-fullwidth" value="0" step=".1" min="0" max="1" type="range">Price Range</input>
         <button id="shakey-shake" class="shake-button button is-rounded">Shake</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
