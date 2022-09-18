@@ -1,4 +1,4 @@
-const baseURL = "http://www.boredapi.com/api/activity"
+const baseURL = "https://www.boredapi.com/api/activity"
 const applySettings = "?"
 const adjustType = "?type="
 const adjustAccess = "&accessibility="
@@ -50,7 +50,6 @@ function applyChoices() {
     fetchActivity(boredURL)
 }
 
-
 function showPeople(){
     let whatType = document.getElementById("type");
     let peopleChooser = document.getElementById("people-chooser");
@@ -65,7 +64,13 @@ function shakeBall(){
     let ball = document.getElementById('outer')
     ball.classList.add('animate__animated', 'animate__wobble')
 }
+
 function resetBall(){
     let resetBall = document.getElementById('outer');
     resetBall.classList.remove('animate__animated', 'animate__wobble')
+}
+
+function resetGif(){
+    let gif = document.getElementById('button-and-ball');
+    gif.reset()
 }
