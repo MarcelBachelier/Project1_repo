@@ -5,7 +5,7 @@ function init() {
   document.getElementById("shakey-shake").addEventListener("click", ev => {
     ev.preventDefault(); //to stop the page reload
     let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=1&q=`;
-    let str = document.getElementById("activity").value;
+    let str = document.getElementById("type").value.trim();
     console.log(str)
     url = url.concat(str);
     console.log(url);
@@ -23,7 +23,7 @@ function init() {
         fc.textContent = content.data[0].title;
         fig.appendChild(img);
         fig.appendChild(fc);
-        let out = document.querySelector(".answer-here");
+        let out = document.querySelector(".button-and-ball");
         out.insertAdjacentElement("afterbegin", fig);
         document.querySelector("#activity").value = "";
       })
