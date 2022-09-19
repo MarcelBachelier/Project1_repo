@@ -33,7 +33,6 @@ function iAmBored() {
     shakeButton.addEventListener('click', applyChoices);
     shakeButton.addEventListener('click', shakeBall);
     wholeABall.addEventListener('animationend', resetBall);
-    shakeButton.addEventListener('click', resetGif) 
 }
 iAmBored();
 
@@ -77,7 +76,6 @@ function resetBall(){
     resetBall.classList.remove('animate__animated', 'animate__wobble')
 }
 
-function resetGif(){
-    let gif = document.getElementsByTagName("img");
-    gif.classList.add('animate__animated', 'animate__hinge')
+function myButton() {
+    location.reload()
 }
