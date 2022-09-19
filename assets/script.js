@@ -32,13 +32,11 @@ function iAmBored() {
 
     shakeButton.addEventListener('click', applyChoices);
     shakeButton.addEventListener('click', shakeBall);
-<<<<<<< HEAD
     wholeABall.addEventListener('animationend', resetBall) 
     shakeButton.addEventListener('click', titleHinge)
-=======
+
     wholeABall.addEventListener('animationend', resetBall);
-    shakeButton.addEventListener('click', resetGif) 
->>>>>>> 98734444373e6fb77f9c2f95f8067eba96bc2829
+
 }
 iAmBored();
 
@@ -82,17 +80,12 @@ function resetBall(){
     resetBall.classList.remove('animate__animated', 'animate__wobble')
 }
 
-function resetGif(){
-<<<<<<< HEAD
-    let gif = document.getElementById('button-and-ball');
-    gif.reset()
-}
+function myButton() {
+    location.reload()
+    }
+
 function titleHinge(){
     let targetTitle = document.getElementById('falling-title');
     targetTitle.classList.add('animate__animated','animate__hinge')
 }
-=======
-    let gif = document.getElementsByTagName("img");
-    gif.classList.add('animate__animated', 'animate__hinge')
-}
->>>>>>> 98734444373e6fb77f9c2f95f8067eba96bc2829
+
