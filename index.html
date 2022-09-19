@@ -10,12 +10,14 @@
     <title>Document</title>
 </head>
 <header class="welcome">
-    <h1 id="falling-title" class="heding has-text-centered is-rounded" animate__hinge><strong>Magic Bored Ball</strong></h1>
+
+    <h1 id="falling-title" class="heding has-text-centered is-rounded"><strong>Magic Bored Ball</strong></h1>
+
     <br>
     <h2 class="heding has-text-centered is-rounded" animate__hinge>Shake to cure boredom. Repeat until cured.</h2>
 </header>
 <body>
-    <div class="button-and-ball">
+    <div id="the-whole-ball" class="button-and-ball">
         <div id="outer" class="ball">
             <div class="answer-here">
                 <p class="activity-text has-text-centered" id="activity"></p>
@@ -45,7 +47,7 @@
               <option value="5">5+</option>
             </select>
           </div>
-          <input id="price" class="slider is-fullwidth" value="0" step=".1" min="0" max="1" type="range">Price Range</input>
+          <input id="price" class="slider is-fullwidth" value=".1" step=".1" min=".1" max="1" type="range">Price Range</input>
         <button id="shakey-shake" class="shake-button button is-rounded">Shake</button>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
