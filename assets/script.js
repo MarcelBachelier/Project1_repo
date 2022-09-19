@@ -31,6 +31,7 @@ function iAmBored() {
     shakeButton.addEventListener('click', applyChoices);
     shakeButton.addEventListener('click', shakeBall);
     wholeABall.addEventListener('animationend', resetBall) 
+    shakeButton.addEventListener('click', titleHinge)
 }
 iAmBored();
 
@@ -73,4 +74,8 @@ function resetBall(){
 function resetGif(){
     let gif = document.getElementById('button-and-ball');
     gif.reset()
+}
+function titleHinge(){
+    let targetTitle = document.getElementById('falling-title');
+    targetTitle.classList.add('animate__animated','animate__hinge')
 }
